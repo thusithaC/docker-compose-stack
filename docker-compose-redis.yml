@@ -1,10 +1,11 @@
-version: "2.4"
-rabbit1:
-  image: "rabbitmq:management"
-  ports:
-    - "5099:15672"
-    - "5100:5672"
-  sysctls:
-    net.ipv4.tcp_keepalive_intvl: 10
-    net.ipv4.tcp_keepalive_probes: 15
-    net.ipv4.tcp_keepalive_time: 60
+version: "2.3"
+services:
+  rabbit:
+    image: "rabbitmq:management"
+    ports:
+      - "5099:15672"
+      - "5100:5672"
+    sysctls:
+      net.ipv4.tcp_keepalive_intvl: 10
+      net.ipv4.tcp_keepalive_probes: 15
+      net.ipv4.tcp_keepalive_time: 60
